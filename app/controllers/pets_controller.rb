@@ -33,7 +33,6 @@ class PetsController < ApplicationController
   get '/pets/:id/edit' do
     @pet = Pet.find(params[:id])
     @owner = Owner.find_by_id(@pet.owner_id)
-    # binding.pry
     erb '/pets/edit'.to_sym
   end
 
