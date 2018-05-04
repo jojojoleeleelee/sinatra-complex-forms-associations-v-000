@@ -8,12 +8,10 @@
   <h3>Edit Owner:  </h3>
   <p>
   <%@owners.each do |owner|%>
-  <input type="radio" name="pet[owner_id]" value="<%=owner.id%>" id="<%=owner.name%>" <%='checked' if @pet.owner.name == owner.name %>><%=owner.name%></input>
+  <input type="radio" name="pet[owner_id]" value="<%=owner.id%>" id="<%=owner.name%>" <%='checked' if @pet.owner.name == owner.name %>><%=owner.name%>
 <%end%>
 </p>
-  <p>
-    <input type="text" name="pet[owner][name]" value="<%=@owner.name%>" id="owner_name">
-  </p>
+
   <h3>Or make a new owner altogether!</h3>
   <input type="text" name="owner[name]" id="owner_name">
   <p></p>
