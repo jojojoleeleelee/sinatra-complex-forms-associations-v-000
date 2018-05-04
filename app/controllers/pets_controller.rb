@@ -50,6 +50,6 @@ class PetsController < ApplicationController
       @pet.save
     end
     binding.pry
-    redirect "pets/#{@pet.id}"
+    # redirect "pets/#{@pet.id}"
   end
 end
