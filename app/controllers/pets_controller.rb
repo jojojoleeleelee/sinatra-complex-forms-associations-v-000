@@ -26,13 +26,13 @@ class PetsController < ApplicationController
   end
 
   post '/pets/:id' do
-binding.pry
+# binding.pry
     redirect to "pets/#{@pet.id}"
   end
 
   get '/pets/:id/edit' do
     @pet = Pet.find(params[:id])
-    @owner = Owner.find_by_id(params[:owner_id])
+    @owner = Owner.find_by_id(@pet.owner_id)
     binding.pry
     erb '/pets/edit'.to_sym
   end
